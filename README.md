@@ -84,14 +84,6 @@ The SQL query results indicate that the majority of companies that laid off thei
 
 - Companies with the highest layoff in a single day are Google(12000), Meta(11000), Amazon(10000), Microsoft(10000), Ericsson(8500).
 - Companies with most total layoffs: Here Amazon had the highest total layoff of 18150
-
-  ```sql
-  SELECT company, SUM(total_laid_off)
-  FROM world_layoffs.layoffs2
-  GROUP BY company
-  ORDER BY 2 DESC
-  LIMIT 10;
-  ```
 - United states had the highest number of layoffs in these 3 years.
 
 ```sql
@@ -100,6 +92,11 @@ The SQL query results indicate that the majority of companies that laid off thei
   GROUP BY country
   ORDER BY 2 DESC;
 ```
+
+<p>
+  <img width="560" height="340" src="Images/pie_chart_country.png">
+</p>
+
 - Total Layoffs with respect to Year
   
 ```sql
@@ -109,6 +106,9 @@ The SQL query results indicate that the majority of companies that laid off thei
   having year_ is not null
   ORDER BY 1 ASC;
  ```
+<p>
+  <img width="560" height="340" src="Images/year.png">
+</p>
 
 The results depicted thatcomparitively 2020 and 2023 had most number of layoffs.
 
